@@ -8,11 +8,11 @@ mpif90 -Os -xAVX -no-prec-div -r8 -arch host -align dcommons -g -traceback -Dcha
 
 cd ..
 
-temps='018' # 045 040 035 030 028 026 024 022' 
+temps='050 045 040 035 030 028 026 024 022' 
 for i in $temps
 do ./dmd < temp_$i > out_$i wait
 done
 
-#for i in {1..20}
-#do ./HS3 < temp_018 > out_018_$i wait
-#done
+for i in {1..20}
+do ./dmd < temp_018 > out_018_$i wait
+done
